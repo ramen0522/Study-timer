@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+{% block content %}
+<body>
+    <link rel="stylesheet" href="../static/tabs.css" />
+    <link rel="stylesheet" href="../static/timer.css"/>
+    <div id="buttonContainer">
+        <button onclick="showPanel(0,'#f44336')">Stop watch</button>
+        <button onclick="showPanel(1,'#4caf50')">Countdown timer</button>
+    </div>
+    <div id="tabContainer">
+        <div id="tabPanel">
+            <div id="stopwatch">
+                <div class="time">
+                  00:00:00  
+                </div>
+                <div class="controls">
+                    <button id="start">Start</button>
+                    <button id="stop">Stop</button>
+                    <button id="finish">Finish</button>   
+                </div>
+                <script src="../static/stopwatch.js"></script>
+            </div> 
+        </div>
+        <div id="tabPanel">
+            <div class="timer" id="countdown_timer"></div>
+            <script src="../static/timer.js" type = "module"></script> 
+        </div>
+    </div>
+    <script src="../static/tabs.js"></script>   
+    <script src="../static/main.js" type = "module"></script>   
+</body>
+{% endblock %}
